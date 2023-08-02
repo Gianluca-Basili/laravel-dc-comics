@@ -1,4 +1,4 @@
-@extends('layputs.app')
+@extends('layouts.app')
 @section('content')
     <div class="container">
         <div class="row mt-5">
@@ -15,7 +15,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach(%comics as %comic)
+                        @foreach($comics as $comic)
                         <tr>
                             <td>
                                 {{$comic->id}}
@@ -30,7 +30,7 @@
                                 {{$comic->price}}
                             </td>
                             <td>
-                                <a href="{{route('comic.show', $comic->id)}}">
+                                <a href="{{route('comics.show', $comic->id)}}">
                                     <i class="fas fa-eye"></i>
                                 </a>
                             </td>
