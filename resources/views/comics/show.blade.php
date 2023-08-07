@@ -23,6 +23,7 @@
         </div>
     </div>
 
+    <button class="btn btn-success"><a class="text-decoration-none link-light" href="{{route('comics.index')}}">Homepage</a></button>
 
 
 </div>

@@ -32,10 +32,21 @@
                             <td>
                                 {{$comic->price}}
                             </td>
-                            <td>
+                            
+                            <td class="text-center">
                                 <a href="{{route('comics.show', $comic->id)}}">
                                     <i class="fas fa-eye"></i>
                                 </a>
+                                <a  class= "btn btn-warning btn-sm" href="{{route('comics.edit', $comic->id)}}">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <form class="d-inline-block" action="{{route('comics.destroy',$comic->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
